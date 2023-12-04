@@ -14,10 +14,6 @@ public abstract class Jet {
 	public Jet() {
 		
 	}
-	
-	
-	
-	
 	public Jet(String model, double speedInMPH, int range, long price) {
 		super();
 		this.model = model;
@@ -84,7 +80,7 @@ public abstract class Jet {
 	
 	
 	public String jetData() {
-		return "Jet Model: " + model + ", Speed: " + speedInMPH + ", Range: " + range + ", Price: $" + price;
+		return "Jet Model: " + model + ", Speed: " + speedInMPH + " Mph" + ", Range: " + range + " Miles" + ", Price: $" + price;
 	}
 	
 	public void displayJet() {

@@ -15,6 +15,10 @@ public class Airfield {
 		
 	}
 	
+	public void removeJets(int index) {
+		jets.remove(index);
+	}
+	
 	public ArrayList<Jet> getJets() {
 		return jets;
 	}

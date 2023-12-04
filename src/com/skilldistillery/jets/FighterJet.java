@@ -17,7 +17,7 @@ public class FighterJet extends Jet implements CombatReady{
 	@Override
 	public void fight() {
 		System.out.println("Loading rockets onto FighterJets");
-		System.out.println(model + "now has " + rockets + " rockets loaded");
+		System.out.println(model + " now has " + rockets + " rockets loaded");
 	}
 
 }

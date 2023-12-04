@@ -22,8 +22,7 @@ public class JetsApplication {
 		JetsApplication jetsApp = new JetsApplication();
 		jetsApp.run();
 
-	}
-	
+	}	
 	
 	public void run() {
 		
@@ -85,7 +84,7 @@ public class JetsApplication {
 		for(int i = 0; i < fleetJets.size(); i++) {
 			Jet jets = fleetJets.get(i);
 			String jetStuff = ((Jet) jets).jetData();
-			System.out.println(jetStuff);
+			System.out.println(i + " " + jetStuff);
 		}
 	}
 	private void flyJets() {
@@ -116,10 +115,29 @@ public class JetsApplication {
 		}	
 	}
 	private void addJetToFleet() {
+		System.out.print("Please enter a model name for the Passenger Jet: ");
+		String model = sc.next();
+		System.out.print("Please enter the speed in Miles Per Hour for the Passenger Jet: ");
+		double milesPerHour = sc.nextDouble();
+		System.out.print("Please enter a range in miles for the Passenger Jet: ");
+		int range = sc.nextInt();
+		System.out.print("Please enter a price for the Passenger Jet: ");
+		long price = sc.nextLong();
+		airfield.addJets(new PassengerJet(model, milesPerHour, range, price));
+		System.out.print("Jet + " + model + "Added to fleet!");
 		
 	}
 	private void removeJetFromFleet() {
-		
+		System.out.println("Please select a Jet To Remove: ");
+		this.listFleet();
+		int choice = sc.nextInt();
+		if(choice > airfield.getJets().size()) {
+			System.out.println("Enter a valid number");
+		}
+		else {
+			airfield.removeJets(choice);
+			System.out.println("Jet has been removed successfully");
+		}
 	}
 	
 

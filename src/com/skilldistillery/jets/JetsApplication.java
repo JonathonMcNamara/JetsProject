@@ -131,7 +131,7 @@ public class JetsApplication {
 		System.out.println("Please select a Jet To Remove: ");
 		this.listFleet();
 		int choice = sc.nextInt();
-		if(choice > airfield.getJets().size()) {
+		if(choice > airfield.getJets().size() || choice < airfield.getJets().size() - airfield.getJets().size()) {
 			System.out.println("Enter a valid number");
 		}
 		else {

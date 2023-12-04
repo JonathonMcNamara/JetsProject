@@ -11,11 +11,11 @@ public class JetsApplication {
 
 	public JetsApplication() {	
 		this.airfield = new Airfield();
-		airfield.addJets(new PassengerJet("A01" , 500, 20000, 50_000_000));
 		airfield.addJets(new CargoPlane("A02" , 1234, 350000, 60_000_000));
 		airfield.addJets(new CargoPlane("A03" , 5678, 500000, 70_000_000));
 		airfield.addJets(new FighterJet("A04" , 9123, 12345, 100_000_000));
 		airfield.addJets(new FighterJet("A05" , 4567, 67890, 150_000_000));		
+		airfield.addJets(new PassengerJet("A01" , 500, 20000, 50_000_000));
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
